@@ -21,5 +21,17 @@ int main() {
             mn2 = *ptr;
     }
     printf("%f\n", mn2);
+
+    double *b = new double[n]{};
+    for (int i = 0; i < n; ++i) {
+        b[i] = a[i] >= 0 ? a[i] * 10 : a[i] - 100;
+        printf("%f\n", b[i]);
+    }
+
+    double dot;
+    for (int i = 0; i < n; ++i) {
+        dot += a[i] * b[i];
+    }
+    printf("%f\n", dot);
     return 0;
 }
